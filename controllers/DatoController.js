@@ -8,6 +8,7 @@ export const getAllDatos = async (req, res) => {
     try {
         const datos = await DatoModel.findAll()
         res.json(datos)
+        console.log(datos)
     } catch (error) {
         res.json( {message: error.message} )
     }
